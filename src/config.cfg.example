@@ -1,0 +1,27 @@
+# reddit-dl configuration
+# This file is optional, below are the defaults that are used
+# Arguments such as --filterby can be used to replace these options.
+
+[REDDIT]
+filterBy = new # Can be 'hot', 'new' 'controversial', 'top' or 'rising'
+nsfwFilter = exclude # Can be 'exclude' (no nsfw) 'include' (nsfw & non-nsfw)
+                       # or 'onlyNsfw' (nsfw only)
+defaultImageCount = 50 # Number of images to download by default
+
+[IMGUR]
+downloadImgurImages = yes # If this is disabled, the below options won't work.
+includeImgurAlbums = yes 
+
+[FILETYPES]
+includedFormats = ["jpg", "png", "webm"]
+includeUnsupportedFormats = no # Expect broken-ness.
+
+[FILEMANAGEMENT]
+# These options will configure how reddit-dl handles files in the local directly.
+user = u/{username}
+subreddit = r/{subreddit-name}
+multisubreddit = r-multi/{subreddits} # This creates multiple files!
+
+[AUTO]
+# The following options are used when --auto is specified
+subreddits = ["wallpapers"]
